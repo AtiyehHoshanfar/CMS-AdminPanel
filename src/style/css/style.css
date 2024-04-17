@@ -50,6 +50,12 @@ input {
   width: 100%;
   color: var(--color-primary-950);
 }
+.btn--secondary {
+  border: 2px solid var(--color-secondary-500);
+  background-color: var(--main-white);
+  color: var(--color-secondary-500);
+  border-radius: 100px;
+}
 .btn--primary {
   color: var(--main-white);
   background-color: var(--color-secondary-500);
@@ -58,7 +64,7 @@ input {
 ::placeholder {
   color: var(--color-primary-400);
 }
-/* !login */
+/* ! --------------------------------------------------- login -----------------------------------------*/
 .login-container {
   display: flex;
   flex-direction: column;
@@ -173,6 +179,8 @@ input {
   text-align: center;
   flex: 1 0 0;
 }
+/* ! ----------------------------------------- signin/signup media query ------------------------------------- */
+
 @media screen and (min-width: 768px) {
   .login-container {
     display: flex;
@@ -218,10 +226,69 @@ input {
     font-size: 1.4rem;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .login-form__items {
     margin: auto;
     width: 60%;
+  }
+}
+/* ! ------------------------------------------- First Page ------------------------------------- */
+.first-page {
+  height: 100vh;
+  background-color: var(--color-primary-500);
+  padding: 0.8rem;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+
+
+}
+.first-page__logo {
+  background-color: #fff;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+}
+.first-page__welcome-message {
+  color: var(--main-white);
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.first-page__buttons {
+  display: flex;
+  flex-direction: column;
+
+}
+.first-page__signup-btn,
+.first-page__signin-btn {
+  padding: 1.2rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+/* ! ----------------------------------------- firstpage media query ------------------------------------- */
+@media screen and (min-width: 768px) {
+
+  .first-page__welcome-message {
+    font-size: 3.2rem;
+  }
+  .first-page__buttons {
+    flex-direction: row;
+    width: 60%;
+    margin:0 auto;
+  }
+  .first-page__signup-btn,
+  .first-page__signin-btn {
+    padding: 1.6rem;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0.6rem;
+    flex: 1 0 0;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .first-page__buttons {
+    width: 40%;
   }
 }
