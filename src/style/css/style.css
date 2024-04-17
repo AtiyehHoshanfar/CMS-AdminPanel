@@ -60,9 +60,11 @@ input {
 }
 /* !login */
 .login-container {
-  /* padding: 0.8rem; */
+  display: flex;
+  flex-direction: column;
 }
 .login__image {
+  width: 100%;
   border-radius: 32px 32px 0 32px;
   height: 40vh;
   background-color: var(--color-primary-500);
@@ -76,17 +78,17 @@ input {
   top: -32px;
   right: 0;
   border-radius: 50%;
-  
+
   box-shadow: 16px -16px 0px var(--color-primary-500);
 }
 .login__content {
   position: relative;
   margin-top: 3.2rem;
-
 }
 .login-form__items {
   display: flex;
   flex-direction: column;
+  margin: 0.8rem;
 }
 .login-form__item {
   margin-bottom: 1.6rem;
@@ -170,4 +172,56 @@ input {
 .login-form__with-google-text {
   text-align: center;
   flex: 1 0 0;
+}
+@media screen and (min-width: 768px) {
+  .login-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .login__image {
+    height: 100vh;
+    border-radius: 32px 0 32px 32px;
+    width: 50%;
+    position: relative;
+  }
+  .login__image::after {
+    content: " ";
+    width: 48px;
+    right: -48px;
+    border-radius: 50%;
+    height: 48px;
+    position: absolute;
+    box-shadow: -24px -24px 0 var(--color-primary-500);
+  }
+  .login__content {
+    flex: 1 0 0;
+  }
+  .login-form__items {
+    margin: auto;
+    width: 80%;
+  }
+  .login__content::after {
+    box-shadow: 16px -16px 0px #fff;
+  }
+  .login-form__input {
+    padding: 1.2rem 1.6rem;
+  }
+  .login-form__submit-btn {
+    padding: 1.8rem;
+    font-size: 1.8rem;
+  }
+  .login-form__forgot-password {
+    font-size: 1.2rem;
+  }
+  .login-form-error-message {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .login-form__items {
+    margin: auto;
+    width: 60%;
+  }
 }
