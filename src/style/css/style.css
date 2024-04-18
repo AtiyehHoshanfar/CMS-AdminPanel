@@ -236,12 +236,10 @@ input {
 .first-page {
   height: 100vh;
   background-color: var(--color-primary-500);
-  padding: 0.8rem;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-
-
+  padding: 0 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .first-page__logo {
   background-color: #fff;
@@ -258,25 +256,23 @@ justify-content: space-evenly;
 .first-page__buttons {
   display: flex;
   flex-direction: column;
-
 }
 .first-page__signup-btn,
 .first-page__signin-btn {
   padding: 1.2rem;
   font-weight: bold;
   font-size: 1.6rem;
-  margin-bottom: 0.8rem;
+  /* margin-bottom: 0.8rem; */
 }
 /* ! ----------------------------------------- firstpage media query ------------------------------------- */
 @media screen and (min-width: 768px) {
-
   .first-page__welcome-message {
     font-size: 3.2rem;
   }
   .first-page__buttons {
     flex-direction: row;
     width: 60%;
-    margin:0 auto;
+    margin: 0 auto;
   }
   .first-page__signup-btn,
   .first-page__signin-btn {
@@ -290,5 +286,96 @@ justify-content: space-evenly;
 @media screen and (min-width: 1240px) {
   .first-page__buttons {
     width: 40%;
+  }
+}
+/* ! ----------------------------------- Container --------------------------------- */
+.main-container{
+  background-color: var(--color-primary-100);
+}
+.container {
+  height: 100vh;
+  padding: 1.6rem;
+}
+/* ? ----------------------- Header container ---------------------- */
+.container__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  border-radius: 16px;
+  padding: 0.8rem;
+  background-color: var(--main-white);
+}
+.header__user-profile-photo {
+  height: 90%;
+}
+.header__user-detail {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.header__theme-btn,
+.header__exit-btn {
+  padding: 1.2rem;
+  margin: 0.2rem;
+}
+.header__exit-btn {
+  background-color: var(--color-primary-500);
+}
+
+/* ! ------------------------------ container media query -------------------------  */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10rem 1fr;
+    gap: 1.6rem 2.4rem;
+  }
+  .container__header {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  .container__main-content {
+    grid-row: 2/3;
+    background-color: #4c1d95;
+    grid-column: 2/3;
+  }
+  .container__admin-information {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: #c4b5fd;
+  }
+}
+/* ? ----------------------- Header container media query ---------------------- */
+@media screen and (min-width: 768px) {
+  .container__header {
+    height: 90%;
+  }
+
+  .header__user-detail {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+    line-height: 1.5;
+    padding: 1.2rem;
+  }
+  .header__user-name{
+    font-weight: bold ;
+    font-size: 2.4rem;
+    color: var(--text-color);
+  }
+  .header__user-email{
+    font-weight:  ;
+    font-size: 1.8rem;
+    color: #64748b;
+  }
+  .header__theme-btn,
+  .header__exit-btn {
+    padding: 1.8rem;
+    font-size: 2rem;
+    margin: 0.2rem;
   }
 }
