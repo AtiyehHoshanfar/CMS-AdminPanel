@@ -181,7 +181,6 @@ input {
   flex: 1 0 0;
 }
 /* ! ----------------------------------------- signin/signup media query ------------------------------------- */
-
 @media screen and (min-width: 768px) {
   .login-container {
     display: flex;
@@ -305,6 +304,7 @@ input {
   background-color: var(--main-white);
   border-radius: 16px;
   padding: 0.8rem;
+  margin-bottom: 1.2rem;
 }
 
 .header__user-profile-photo {
@@ -335,6 +335,7 @@ input {
   align-items: center;
   justify-content: center;
   border-radius: 16px;
+  margin-bottom: 1.2rem;
 }
 .admin-information__content {
   width: 100%;
@@ -398,7 +399,24 @@ input {
   background-color: var(--color-primary-500);
   padding: 0.8rem 1.2rem;
 }
-
+/* ? -------------------- main-content container ------------------ */
+.container__main-content {
+  background-color: var(--main-white);
+  border-radius: 16px;
+}
+.main-content__nav-items {
+  margin: 0 auto;
+  justify-content: space-between;
+display: flex;
+  font-size: 1.4rem;
+  padding: 0.8rem;
+  border-bottom: 2px solid var(--main-gray);
+  flex-wrap: wrap;
+  
+}
+.main-content__nav-item a {
+  color: var(--color-primary-800);
+}
 /* ! ------------------------------ container media query -------------------------  */
 @media screen and (min-width: 768px) {
   .container {
@@ -416,13 +434,11 @@ input {
   }
   .container__main-content {
     grid-row: 2/3;
-    background-color: #4c1d95;
     grid-column: 2/3;
   }
   .container__admin-information {
     grid-row: 2/3;
     grid-column: 1/2;
-    background-color: #c4b5fd;
   }
 }
 /* ? ----------------------- Header container media query ---------------------- */
@@ -508,11 +524,107 @@ input {
     height: 16rem;
   }
 }
-@media screen and (max-width:320px) {
+@media screen and (max-width: 320px) {
   .admin-information__user-information {
     flex-wrap: wrap;
   }
   .admin-information__user-information li {
-width: 100%;
+    width: 100%;
   }
+}
+/* ?  --------------------- main-content media query ------------------------ */
+
+@media screen and (min-width:768px ) {
+  .main-content__nav-items {
+    padding: 1.2rem;
+  }
+  .main-content__nav-item a {
+padding:1.2rem ;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main-content__nav-items {
+    font-size: 1.2rem;
+  }
+  .main-content__nav-item a {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.6rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* ! -------------------- User Panel ------------------- */
+.user-panel__detail{
+  padding: 0.8rem;
+}
+.user-panel__user-list{
+  display: flex;
+  flex-direction: column;
+}
+.user-panel__user-information{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary-100);
+  padding: 0.6rem;
+  border-radius: 12px;
+}
+
+.user-panel__user-information:not(:last-child){
+  margin-bottom: 0.8rem;
+
+}
+.user-panel__user-image{
+  height: 6rem;
+}
+.user-panel__username{
+  display: flex;
+  flex-direction: column;
+justify-self: start;
+flex: 1 0 0;
+padding: 0.8rem;
+}
+.user-panel__first-name{
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  margin-bottom: 0.4rem;
+}
+.user-panel__last-name{
+  font-size: 1.4rem;
+  color: #64748b;
+}
+.user-panel__edit-btn{
+  padding: 0.8rem 2.4rem;
+
+}
+.user-panel__remove-btn{
+padding:0.6rem ;
+}
+
+/* ! ------------ user panel media query --------------- */
+@media screen and (min-width:768px){
+  
+  
+}
+@media screen and (max-width:320px){
+  .user-panel__edit-btn,.user-panel__remove-btn{
+margin: 0.2rem;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  }
+  .user-panel__user-image{
+    height: 4rem;
+  }
+  .user-panel__first-name{
+    font-size: 1.2rem
+  }
+  .user-panel__last-name{
+    font-size: 1.2rem
+  }
+
 }
