@@ -93,15 +93,21 @@ input {
   position: relative;
   margin-top: 3.2rem;
 }
-  .login-form__items {
+.login-form__items {
   display: flex;
   flex-direction: column;
   margin: 0.8rem;
 }
-.session-form__item,.login-form__item {
+.session-form__item,
+.login-form__item,
+.change-password__item,
+.change-username__item {
   margin-bottom: 1.6rem;
 }
-.session-form__input,.login-form__input {
+.session-form__input,
+.login-form__input,
+.change-password__input,
+.change-username__input {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,11 +116,15 @@ input {
   border-radius: 100px;
   margin-bottom: 0.4rem;
 }
-.login-form__input-password {
+.login-form__input-password,
+.change-password__input-password {
   display: flex;
   align-items: center;
 }
-.session-form__input-icon,.login-form__input-icon {
+.session-form__input-icon,
+.login-form__input-icon,
+.change-password__input-icon,
+.change-username__input-icon {
   font-size: 1.6rem;
   color: var(--color-primary-700);
 }
@@ -124,14 +134,19 @@ input {
   align-content: center;
   justify-content: space-between;
 }
-.session-form-error-message,.login-form-error-message {
+.session-form-error-message,
+.login-form-error-message,
+.change-password-error-message,
+.change-username-error-message {
   color: var(--color-error);
   display: none;
   font-size: 1.2rem;
 }
 /* ? visible and invisible error message */
 .login-form-error-message.visible,
-.session-form-error-message.visible {
+.session-form-error-message.visible,
+.change-password-error-message.visible,
+.change-username-error-message.visible {
   display: block;
 }
 .login-form__forgot-password {
@@ -207,14 +222,16 @@ input {
   .login__content {
     flex: 1 0 0;
   }
- .session-form__items, .login-form__items {
+  .session-form__items,
+  .login-form__items {
     margin: auto;
     width: 80%;
   }
   .login__content::after {
     box-shadow: 16px -16px 0px var(--main-white);
   }
-  .session-form__input,.login-form__input {
+  .session-form__input,
+  .login-form__input {
     padding: 1.2rem 1.6rem;
   }
   .login-form__submit-btn {
@@ -224,12 +241,14 @@ input {
   .login-form__forgot-password {
     font-size: 1.2rem;
   }
- .session-form-error-message, .login-form-error-message {
+  .session-form-error-message,
+  .login-form-error-message {
     font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .session-form__items,.login-form__items {
+  .session-form__items,
+  .login-form__items {
     margin: auto;
     width: 60%;
   }
@@ -545,7 +564,7 @@ input {
     padding: 1.2rem;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 380px) {
   .main-content__nav-items {
     font-size: 1.2rem;
   }
@@ -707,7 +726,7 @@ input {
   .course-panel__add-new-course-btn {
     padding: 1.4rem;
     margin: 0 0.6rem;
-font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 420px) {
@@ -755,21 +774,21 @@ font-size: 1.4rem;
 }
 /* ! ---------------------- session ------------------------ */
 /**  other style are with login styles */
-.session-main-container{
-padding: 0.8rem;
+.session-main-container {
+  padding: 0.8rem;
 }
 
-.session-form__add-new-session-btn{
-width: 100%;
-padding: 1.2rem;
-margin-bottom: 1.2rem;
+.session-form__add-new-session-btn {
+  width: 100%;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
 }
-.session-container{
+.session-container {
   display: flex;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   flex-direction: column;
 }
-.session-box{
+.session-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -777,38 +796,111 @@ flex-wrap: wrap;
   padding: 0.8rem;
   border-radius: 12px;
 }
-.session-name{
+.session-name {
   font-size: 1.4rem;
-  color: var(--text-color)
+  color: var(--text-color);
 }
-.session-time{
-  font-size:1.2rem ;
+.session-time {
+  font-size: 1.2rem;
   color: var(--dark-gray);
 }
-.session-price{
+.session-price {
   background-color: var(--color-primary-500);
   padding: 0.4rem 0.8rem;
   border-radius: 12px;
   color: var(--main-white);
   margin: 0 0.2rem;
 }
-.session-detail{
+.session-detail {
   display: flex;
   align-items: center;
-  
 }
 
-/* !------------------- session media query -------------- */
-@media screen and (min-width:768px) {
-  .session-form__items{
+/* !---------------------------- session media query --------------------------- */
+@media screen and (min-width: 768px) {
+  .session-form__items {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
     gap: 1.2rem;
   }
 
-  .session-form__add-new-session-btn{
+  .session-form__add-new-session-btn {
     grid-column: 1/3;
     font-weight: bold;
+  }
+}
+/* ! ---------------------------- edit information  -------------------------- */
+.edit-information{
+  padding: 0.8rem;
+}
+/* ?---------------------- change password / username ------------------------- */
+.edit-information__password,
+.edit-information__name,
+.edit-information__image {
+  position: relative;
+}
+.edit-information__change-password,
+.edit-information__change-name,
+.edit-information__change-image {
+  display: flex;
+  flex-direction: column;
+}
+.change-username__item,
+.change-password__item,
+.change-image__item,
+.change-banner__item {
+  flex: 1 0 0;
+}
+.change-password__input,
+.change-username__input {
+  margin: auto;
+}
+
+.edit-information__password-title,
+.edit-information__name-title,
+.edit-information__image-title {
+  position: relative;
+  font-size: 1.4rem;
+  color: var(--color-primary-950);
+  left: 20px;
+  margin-bottom: 0.6rem;
+}
+
+.edit-information__password::before,
+.edit-information__name::before,
+.edit-information__image::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  top: 5px;
+  background-color: var(--color-primary-900);
+}
+input[type="file"] {
+  display: none;
+}
+.change-image__item,
+.change-banner__item {
+  background-color: var(--color-primary-500);
+  padding:1.2rem;
+  border-radius: 16px;
+  margin: 0.6rem;
+}
+.change-image__text {
+  color: var(--main-white);
+  font-size: 1.4rem;
+}
+/* ?-----------------------------------Media Query --------------------------- */
+@media screen and (min-width: 768px) {
+  .edit-information__change-password,
+  .edit-information__change-name,
+  .edit-information__change-image {
+    flex-direction: row;
+    margin-bottom:2.4rem;
+  }
+  .change-password__item,
+  .change-username__item {
+    margin: 0.4rem;
   }
 }
