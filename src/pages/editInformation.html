@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/style/css/style.css" />
+    <title>Information</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <!-- ! header container -->
+        <div class="container__header box">
+          <img
+            class="header__user-profile-photo"
+            src="/public/image/modern girl profile vector_prev_ui.png"
+            alt="profile image"
+          />
+          <div class="header__user-detail">
+            <span class="header__user-name">UserName</span>
+            <span class="header__user-email">UserEmail@gmail.com</span>
+          </div>
+          <div class="header__buttons">
+            <button class="header__theme-btn btn--primary">
+              <i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="header__exit-btn btn--primary">
+              <span>Exit Panel</span>
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+          </div>
+        </div>
+        <!-- ! Admin information -->
+        <div class="container__admin-information">
+          <div class="admin-information__content">
+            <!-- ! admin profile -->
+            <div class="admin-information__main-detail">
+              <img
+                class="admin-information__profile-photo"
+                src="/public/image/modern girl profile vector_prev_ui.png"
+                alt="profile image"
+              />
+              <ul class="admin-information__user-information">
+                <li><span>First Name</span><span>Arash</span></li>
+                <li><span>Last Name</span><span>Karimi</span></li>
+                <li><span>courses</span><span>35</span></li>
+              </ul>
+            </div>
+            <!-- ! edit and email -->
+            <div class="box-information">
+              <div class="admin-information__detail">
+                <span class="admin-information__user-name">UserName</span>
+                <span class="admin-information__user-email"
+                  >UserEmail@gmail.com</span
+                >
+              </div>
+
+              <button class="btn--primary admin-information__edit-btn">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span> Change Information </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+<div>
+          <!-- !  content -->
+          <div class="container__main-content">
+            <!-- ! Header -->
+            <ul class="main-content__nav-items">
+              <li class="main-content__nav-item">
+                <a href="#">
+                  <i class="fa-solid fa-people-group"></i>
+                  <span>Users</span>
+                </a>
+              </li>
+              <li class="main-content__nav-item">
+                <a href="#">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                  <span>Information</span>
+                </a>
+              </li>
+              <li class="main-content__nav-item">
+                <a href="#">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>Courses</span>
+                </a>
+              </li>
+              <li class="main-content__nav-item">
+                <a href="#">
+                  <i class="fa-solid fa-book"></i>
+                  <span>Sessions</span>
+                </a>
+              </li>
+            </ul>
+            <!-- ! main Content  -->
+  
+            <div class="edit-information">
+              <!-- ! Name -->
+              <div class="edit-information__name">
+                <h3 class="edit-information__name-title">Username</h3>
+                <ul class="edit-information__change-name">
+                  <li class="change-username__item">
+                    <div class="change-username__input">
+                      <i class="change-username__input-icon fa-solid fa-user"></i>
+                      <input type="text" placeholder="Name..." />
+                    </div>
+                    <!-- !add visible class to show error message -->
+                    <h4 class="change-username-error-message">
+                      error message your password is invalid
+                    </h4>
+                  </li>
+                  <li class="change-username__item">
+                    <div class="change-username__input">
+                      <i class="change-username__input-icon fa-solid fa-user"></i>
+                      <input type="text" placeholder="LastName..." />
+                    </div>
+                    <!-- !add visible class to show error message -->
+                    <h4 class="change-username-error-message">
+                      error message your password is invalid
+                    </h4>
+                  </li>
+                </ul>
+              </div>
+              <!-- ! Password -->
+              <div class="edit-information__password">
+                <h3 class="edit-information__password-title">Password</h3>
+                <ul class="edit-information__change-password">
+                  <!-- ! Old Password -->
+                  <li class="change-password__item">
+                    <div class="change-password__input">
+                      <span class="change-password__input-password">
+                        <i
+                          class="change-password__input-icon fa-solid fa-key"
+                        ></i>
+                        <input type="password" placeholder="Old password..." />
+                      </span>
+                      <button>
+                        <i
+                          class="change-password__input-icon fa-solid fa-eye"
+                        ></i>
+                      </button>
+                    </div>
+                    <div class="login-form__input-detail">
+                      <!-- !add visible class to show error message -->
+                      <h4 class="change-password-error-message">
+                        error message your password is invalid
+                      </h4>
+                    </div>
+                  </li>
+                  <!-- ! New Password -->
+                  <li class="change-password__item">
+                    <div class="change-password__input">
+                      <span class="change-password__input-password">
+                        <i
+                          class="change-password__input-icon fa-solid fa-key"
+                        ></i>
+                        <input type="password" placeholder="New password..." />
+                      </span>
+                      <button>
+                        <i
+                          class="change-password__input-icon fa-solid fa-eye"
+                        ></i>
+                      </button>
+                    </div>
+                    <div class="login-form__input-detail">
+                      <!-- !add visible class to show error message -->
+                      <h4 class="change-password-error-message">
+                        error message your password is invalid
+                      </h4>
+                    </div>
+                  </li>
+                  <!-- ! Confirm Password -->
+                  <li class="change-password__item">
+                    <div class="change-password__input">
+                      <span class="change-password__input-password">
+                        <i
+                          class="change-password__input-icon fa-solid fa-key"
+                        ></i>
+                        <input
+                          type="password"
+                          placeholder="Confirm password..."
+                        />
+                      </span>
+                      <button>
+                        <i
+                          class="change-password__input-icon fa-solid fa-eye"
+                        ></i>
+                      </button>
+                    </div>
+                    <div class="login-form__input-detail">
+                      <!-- !add visible class to show error message -->
+                      <h4 class="change-password-error-message">
+                        error message your password is invalid
+                      </h4>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- ! Image -->
+              <div class="edit-information__image">
+                <h3 class="edit-information__image-title">Image</h3>
+                <ul class="edit-information__change-image">
+                  <li  class="change-image__item">
+                    <label for="change-image">
+                      <input type="file" id="change-image" />
+                      <span class="change-image__text">Select Your Image</span>
+                    </label>
+                  </li>
+                  <li  class="change-banner__item">
+                    <label for="change-banner">
+                      <input type="file" id="change-banner" />
+                      <span class="change-image__text">Select Your Banner</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+</div>
+      </div>
+    </div>
+  </body>
+</html>

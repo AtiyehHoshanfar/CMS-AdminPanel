@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/style/css/style.css" />
+    <title>course panel</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <!-- ! header container -->
+        <div class="container__header box">
+          <img
+            class="header__user-profile-photo"
+            src="/public/image/modern girl profile vector_prev_ui.png"
+            alt="profile image"
+          />
+          <div class="header__user-detail">
+            <span class="header__user-name">UserName</span>
+            <span class="header__user-email">UserEmail@gmail.com</span>
+          </div>
+          <div class="header__buttons">
+            <button class="header__theme-btn btn--primary">
+              <i class="fa-solid fa-sun"></i>
+            </button>
+            <button class="header__exit-btn btn--primary">
+              <span>Exit Panel</span>
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </button>
+          </div>
+        </div>
+        <div>
+          <!-- ! Admin information -->
+          <div class="container__admin-information">
+            <div class="admin-information__content">
+              <!-- ! admin profile -->
+              <div class="admin-information__main-detail">
+                <img
+                  class="admin-information__profile-photo"
+                  src="/public/image/modern girl profile vector_prev_ui.png"
+                  alt="profile image"
+                />
+                <ul class="admin-information__user-information">
+                  <li><span>First Name</span><span>Arash</span></li>
+                  <li><span>Last Name</span><span>Karimi</span></li>
+                  <li><span>courses</span><span>35</span></li>
+                </ul>
+              </div>
+              <!-- ! edit and email -->
+              <div class="box-information">
+                <div class="admin-information__detail">
+                  <span class="admin-information__user-name">UserName</span>
+                  <span class="admin-information__user-email"
+                    >UserEmail@gmail.com</span
+                  >
+                </div>
+
+                <button class="btn--primary admin-information__edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  <span> Change Information </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- ! main content -->
+          <div class="container__main-content">
+            <!-- !   navbar -->
+            <ul class="main-content__nav-items">
+              <li class="main-content__nav-item">
+                <a href="#">
+                  <i class="fa-solid fa-people-group"></i>
+                  <span>Users</span>
+                </a>
+              </li>
+              <li class="main-content__nav-item">
+                <a href="#">
+                  <i class="fa-regular fa-pen-to-square"></i>
+                  <span>Information</span>
+                </a>
+              </li>
+              <li class="main-content__nav-item">
+                <a href="#">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>Courses</span>
+                </a>
+              </li>
+              <li class="main-content__nav-item">
+                <a href="#">
+                  <i class="fa-solid fa-book"></i>
+                  <span>Sessions</span>
+                </a>
+              </li>
+            </ul>
+            <!-- ! main content -->
+            <div class="course-panel__detail">
+              <ul class="course-panel__courses">
+                <!-- ! course -->
+                <li class="course-panel__course">
+                  <img
+                    class="course-panel__course-image"
+                    src="/public/image/face-detection2.jpg"
+                    alt="course image"
+                  />
+                  <div class="course-panel__course-description">
+                    <div>
+                      <h2 class="course-panel__course-title">
+                        creative project with javascript
+                      </h2>
+                      <p class="course-panel__course-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veniam, molestias.
+                      </p>
+                    </div>
+                    <!-- ! course box footer -->
+                    <ul class="course-panel__course-detail">
+                      <li class="course-panel__item">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <span class="">234.000</span>
+                      </li>
+                      <li class="course-panel__item">
+                        <i class="fa-regular fa-folder-open"></i>
+                        <span class="">BackEnd</span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="course-panel__course">
+                  <img
+                    class="course-panel__course-image"
+                    src="/public/image/face-detection2.jpg"
+                    alt="course image"
+                  />
+                  <div class="course-panel__course-description">
+                    <div>
+                      <h2 class="course-panel__course-title">
+                        creative project with javascript
+                      </h2>
+                      <p class="course-panel__course-content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Veniam, molestias.
+                      </p>
+                    </div>
+                    <!-- ! course box footer -->
+                    <ul class="course-panel__course-detail">
+                      <li class="course-panel__item">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <span class="">234.000</span>
+                      </li>
+                      <li class="course-panel__item">
+                        <i class="fa-regular fa-folder-open"></i>
+                        <span class="">BackEnd</span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="course-panel__add-new-course-container">
+                <button class="course-panel__add-new-course-btn btn--primary">
+                  Add New Course
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
