@@ -1,5 +1,5 @@
 /* ! imports */
-@import url(./reset.css);
+@import url(/frontend/src/style/css/reset.css);
 /* !  Variables */
 :root {
   --color-primary-50: #f5f3ff;
@@ -350,7 +350,7 @@ input {
 
 .container__admin-information {
   width: 100%;
-  background: url(/public/image/48bb02993d5753f90c64ee1822ac2aab.jpg) no-repeat;
+  background: url(/frontend/public/image/48bb02993d5753f90c64ee1822ac2aab.jpg) no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -903,4 +903,10 @@ input[type="file"] {
   .change-username__item {
     margin: 0.4rem;
   }
+}
+
+
+/* ! ------------------------------ signup ------------------------ */
+.change-image__item.signup{
+  margin-bottom: 2.4rem;
 }
