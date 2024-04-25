@@ -26,7 +26,7 @@
             <li class="change-username__item">
                 <div class="change-username__input">
                   <i class="change-username__input-icon fa-solid fa-user"></i>
-                  <input type="text" placeholder="Firstname..." />
+                  <input id="firstname-input" type="text" placeholder="Firstname..." />
                 </div>
                 <!-- !add visible class to show error message -->
                 <h4 class="change-username-error-message">
@@ -36,7 +36,7 @@
               <li class="change-username__item">
                 <div class="change-username__input">
                   <i class="change-username__input-icon fa-solid fa-user"></i>
-                  <input type="text" placeholder="Lastname..." />
+                  <input id="lastname-input" type="text" placeholder="Lastname..." />
                 </div>
                 <!-- !add visible class to show error message -->
                 <h4 class="change-username-error-message">
@@ -46,23 +46,23 @@
               <li class="change-username__item">
                 <div class="change-username__input">
                   <i class="change-username__input-icon fa-solid fa-user"></i>
-                  <input type="text" placeholder="Username..." />
+                  <input id="username-input" type="text" placeholder="Username..." />
                 </div>
                 <!-- !add visible class to show error message -->
-                <h4 class="change-username-error-message">
+                <h4 class="change-username-error-message visible">
                   error message your password is invalid
                 </h4>
               </li>
                      <!-- ! Image -->
 
                   <li  class="change-image__item signup">
-                    <label for="change-image">
-                      <input type="file" id="change-image" />
+                    <label id="image-input" for="change-image">
+                      <input  type="file" id="change-image" />
                       <span class="change-image__text">Select Your Image</span>
                     </label>
                   </li>
                 
-            <button type="submit" class="btn--primary login-form__submit-btn">Login </button>
+            <button type="submit" id="create-user-btn" class="btn--primary login-form__submit-btn">SignUp </button>
 
             <span class="login-form__divider"> or </span>
             <button class="login-form__with-google">
@@ -75,7 +75,7 @@
 
       </div>
     </div>
-
-    <script src="/src/js/index.js"></script>
+<script src="/frontend/src/vendor/axios.min.js"></script>
+    <script  src="/frontend/src/js/signup.js"></script>
   </body>
 </html>
