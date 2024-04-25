@@ -930,3 +930,67 @@ input[type="file"] {
 .change-image__item.signup{
   margin-bottom: 2.4rem;
 }
+
+/* ! ------------------------- modal ---------------------- */
+.modal-container{
+position: fixed;
+display: none;
+width: 100%;
+height: 100vh;
+top:0;
+right: 0;
+}
+.modal-container.visible{
+  display: block;
+}
+.backdrop{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--dark-gray);
+  opacity: 60%;
+  width: 100%;
+  height: 100%;
+}
+.modal__content{
+  position: absolute;
+  width: 80%;
+  padding: 1.6rem;
+  background-color: var(--main-white);
+  top: 50%;
+  right: 50%;
+  border-radius: 12px;
+  transform: translate(50%);
+}
+.modal__text{
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+.modal__btns{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+}
+.modal__btns .btn--primary{
+
+  flex: 1 0 0 ;
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.2rem;
+}
+.btn--primary.yes{
+  background-color: var(--color-primary-500);
+
+}
+
+
+@media screen and (min-width:768px ) {
+  .modal__content{
+    width: 40%;
+    padding: 2.4rem;
+
+  }
+}
