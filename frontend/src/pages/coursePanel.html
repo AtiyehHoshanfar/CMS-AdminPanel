@@ -10,7 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/src/style/css/style.css" />
+    <link rel="stylesheet" href="/frontend/src/style/css/style.css" />
     <title>course panel</title>
   </head>
   <body>
@@ -20,7 +20,7 @@
         <div class="container__header box">
           <img
             class="header__user-profile-photo"
-            src="/public/image/modern girl profile vector_prev_ui.png"
+            src="/frontend/public/image/modern girl profile vector_prev_ui.png"
             alt="profile image"
           />
           <div class="header__user-detail">
@@ -45,7 +45,7 @@
               <div class="admin-information__main-detail">
                 <img
                   class="admin-information__profile-photo"
-                  src="/public/image/modern girl profile vector_prev_ui.png"
+                  src="/frontend/public/image/modern girl profile vector_prev_ui.png"
                   alt="profile image"
                 />
                 <ul class="admin-information__user-information">
@@ -77,25 +77,25 @@
             <!-- !   navbar -->
             <ul class="main-content__nav-items">
               <li class="main-content__nav-item">
-                <a href="#">
+                <a class="nav__link" href="/frontend/src/pages/userPanel">
                   <i class="fa-solid fa-people-group"></i>
                   <span>Users</span>
                 </a>
               </li>
               <li class="main-content__nav-item">
-                <a href="#">
+                <a class="nav__link" href="/frontend/src/pages/editInformation">
                   <i class="fa-regular fa-pen-to-square"></i>
                   <span>Information</span>
                 </a>
               </li>
               <li class="main-content__nav-item">
-                <a href="#">
+                <a class="nav__link" href="/frontend/src/pages/coursePanel">
                   <i class="fa-solid fa-graduation-cap"></i>
                   <span>Courses</span>
                 </a>
               </li>
               <li class="main-content__nav-item">
-                <a href="#">
+                <a class="nav__link" href="/frontend/src/pages/sessionPanel">
                   <i class="fa-solid fa-book"></i>
                   <span>Sessions</span>
                 </a>
@@ -108,7 +108,7 @@
                 <li class="course-panel__course">
                   <img
                     class="course-panel__course-image"
-                    src="/public/image/face-detection2.jpg"
+                    src="/frontend/public/image/face-detection2.jpg"
                     alt="course image"
                   />
                   <div class="course-panel__course-description">
@@ -137,7 +137,7 @@
                 <li class="course-panel__course">
                   <img
                     class="course-panel__course-image"
-                    src="/public/image/face-detection2.jpg"
+                    src="/frontend/public/image/face-detection2.jpg"
                     alt="course image"
                   />
                   <div class="course-panel__course-description">
@@ -175,5 +175,6 @@
         </div>
       </div>
     </div>
+<script type="module" src="/frontend/src/js/SPA.js"></script>
   </body>
 </html>

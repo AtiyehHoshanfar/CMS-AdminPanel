@@ -2,7 +2,7 @@ const firstNameInput = document.querySelector("#firstname-input");
 const lastNameInput = document.querySelector("#lastname-input");
 const userNameInput = document.querySelector("#username-input");
 const imageInput = document.querySelector("#image-input input");
-const createUserBtn = document.querySelector("#create-user-btn ");
+const createUserBtn = document.querySelector("#create-user-btn");
 
 createUserBtn.addEventListener("click", (e) => createNewUser(e));
 
@@ -18,6 +18,7 @@ async function createNewUser(e) {
     "http://localhost:3000/api/users/",
     newAdmin
   );
+   console.log(response)
   clearInputs();
   location.href="http://localhost:5500/frontend/src/pages/userPanel.html"
 }

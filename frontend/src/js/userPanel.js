@@ -44,7 +44,8 @@ function closeRemoveModal(){
 
 }
 function editUserInformation(){
-location.href="http://localhost:5500/frontend/src/pages/editInformation.html"
+location.href="http://localhost:5500/frontend/src/pages/editInformation"
+
 }
 async function removeUser(id){
     const response=await axios.delete(`http://localhost:3000/api/users/${id}`)
