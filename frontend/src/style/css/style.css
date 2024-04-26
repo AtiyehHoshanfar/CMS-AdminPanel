@@ -866,6 +866,7 @@ width: 40%;
   border: 2px solid var(--main-gray);
   padding: 0.8rem;
   border-radius: 12px;
+  margin-bottom: 0.6rem;
 }
 .session-name {
   font-size: 1.4rem;

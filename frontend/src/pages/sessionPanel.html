@@ -10,8 +10,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/src/style/css/style.css" />
-    <title>Layout</title>
+    <link rel="stylesheet" href="/frontend/src/style/css/style.css" />
+    <title>Sessions</title>
   </head>
   <body>
     <div class="main-container">
@@ -20,7 +20,7 @@
         <div class="container__header ">
           <img
             class="header__user-profile-photo"
-            src="/public/image/modern girl profile vector_prev_ui.png"
+            src="/frontend/public/image/modern girl profile vector_prev_ui.png"
             alt="profile image"
           />
           <div class="header__user-detail">
@@ -45,7 +45,7 @@
               <div class="admin-information__main-detail">
                 <img
                   class="admin-information__profile-photo"
-                  src="/public/image/modern girl profile vector_prev_ui.png"
+                  src="/frontend/public/image/modern girl profile vector_prev_ui.png"
                   alt="profile image"
                 />
                 <ul class="admin-information__user-information">
@@ -109,7 +109,7 @@
                 <li class="session-form__item">
                   <div class="session-form__input">
                     <i class="session-form__input-icon fa-solid fa-t"></i>
-                    <input type="text" placeholder="Session Name..." />
+                    <input id="session-name-input" type="text" placeholder="Session Name..." />
                   </div>
                   <!-- !add visible class to show error message -->
                   <h4 class="session-form-error-message">error message your password is invalid</h4>
@@ -117,7 +117,7 @@
                 <li class="session-form__item">
                   <div class="session-form__input">
                     <i class="session-form__input-icon fa-solid fa-clock"></i>
-                    <input type="text" placeholder="Session Time..." />
+                    <input type="text" id="session-time-input" placeholder="Session Time..." />
                   </div>
                   <!-- !add visible class to show error message -->
                   <h4 class="session-form-error-message">error message your password is invalid</h4>
@@ -125,7 +125,7 @@
                 <li class="session-form__item">
                   <div class="session-form__input">
                     <i class="session-form__input-icon fa-regular fa-credit-card"></i>
-                    <input type="text" placeholder="Session Price..." />
+                    <input id="session-price-input" type="text" placeholder="Session Price..." />
                   </div>
                   <!-- !add visible class to show error message -->
                   <h4 class="session-form-error-message visible">error message your password is invalid</h4>
@@ -133,7 +133,7 @@
                 <li class="session-form__item">
                   <div class="session-form__input">
                     <i class="session-form__input-icon fa-solid fa-book-open"></i>
-                    <input type="text" placeholder="Course Name..." />
+                    <input id="session-coursename-input" type="text" placeholder="Course Name..." />
                   </div>
                   <!-- !add visible class to show error message -->
                   <h4 class="session-form-error-message">error message your password is invalid</h4>
@@ -142,18 +142,9 @@
                 <button class="session-form__add-new-session-btn btn--primary">Add New Session</button>
               </ul>
               <!-- ! added sessions -->
-<ul class="session-container">
+<ul class="sessions-container">
   <!-- ! session -->
-  <li class="session-box">
-    <div class="session-name">
-      <span >Session Name :</span>
-      <span> javascript</span>
-    </div>
-    <div class="session-detail">
-      <span class="session-price">152.000</span>
-      <span class="session-time">1hr 30min</span>
-    </div>
-  </li>
+
 </ul>
 
             </div>
@@ -161,5 +152,19 @@
         </div>
       </div>
     </div>
+        <!-- ! modal -->
+    <!-- ? add visible class to show modal -->
+    <div class="modal-container ">
+      <div class="backdrop"></div>
+      <div class="modal__content">
+        <span class="modal__text">Do you want to delete this course ?</span>
+        <div class="modal__btns">
+          <button   id="remove-session-btn"  class="btn--primary yes">Yes</button>
+          <button onclick="closeDeleteSessionModal()"   class="btn--primary no">No</button>
+        </div>
+      </div>
+    </div>
+    <script src="/frontend/src/vendor/axios.min.js"></script>
+    <script src="/frontend/src/js/session.js"></script>
   </body>
 </html>
