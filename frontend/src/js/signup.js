@@ -28,3 +28,4 @@ function clearInputs() {
   lastNameInput.value = "";
   userNameInput.value = "";
 }
+

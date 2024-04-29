@@ -101,12 +101,15 @@ input {
 .session-form__item,
 .login-form__item,
 .change-password__item,
-.change-username__item {
+.change-username__item,
+.addNewCourse-form__item
+ {
   margin-bottom: 1.6rem;
 }
 .session-form__input,
 .login-form__input,
 .change-password__input,
+.addNewCourse-form__input,
 .change-username__input {
   display: flex;
   align-items: center;
@@ -122,6 +125,7 @@ input {
   align-items: center;
 }
 .session-form__input-icon,
+.addNewCourse-form__input-icon,
 .login-form__input-icon,
 .change-password__input-icon,
 .change-username__input-icon {
@@ -136,6 +140,7 @@ input {
 }
 .session-form-error-message,
 .login-form-error-message,
+.addNewCourse-form-error-message,
 .change-password-error-message,
 .change-username-error-message {
   color: var(--color-error);
@@ -145,6 +150,7 @@ input {
 /* ? visible and invisible error message */
 .login-form-error-message.visible,
 .session-form-error-message.visible,
+.addNewCourse-form-error-message.visible,
 .change-password-error-message.visible,
 .change-username-error-message.visible {
   display: block;
@@ -1007,7 +1013,9 @@ input[type="file"] {
   right: 0;
 }
 .modal-container.visible {
-  display: block;
+  display: flex;
+  align-items: center;
+
 }
 .backdrop {
   position: absolute;
@@ -1023,7 +1031,6 @@ input[type="file"] {
   width: 80%;
   padding: 1.6rem;
   background-color: var(--main-white);
-  top: 50%;
   right: 50%;
   border-radius: 12px;
   transform: translate(50%);

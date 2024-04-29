@@ -105,68 +105,11 @@
             <div class="course-panel__detail">
               <ul class="course-panel__courses">
                 <!-- ! course -->
-                <li class="course-panel__course">
-                  <img
-                    class="course-panel__course-image"
-                    src="/frontend/public/image/face-detection2.jpg"
-                    alt="course image"
-                  />
-                  <div class="course-panel__course-description">
-                    <div>
-                      <h2 class="course-panel__course-title">
-                        creative project with javascript
-                      </h2>
-                      <p class="course-panel__course-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veniam, molestias.
-                      </p>
-                    </div>
-                    <!-- ! course box footer -->
-                    <ul class="course-panel__course-detail">
-                      <li class="course-panel__item">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                        <span class="">234.000</span>
-                      </li>
-                      <li class="course-panel__item">
-                        <i class="fa-regular fa-folder-open"></i>
-                        <span class="">BackEnd</span>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="course-panel__course">
-                  <img
-                    class="course-panel__course-image"
-                    src="/frontend/public/image/face-detection2.jpg"
-                    alt="course image"
-                  />
-                  <div class="course-panel__course-description">
-                    <div>
-                      <h2 class="course-panel__course-title">
-                        creative project with javascript
-                      </h2>
-                      <p class="course-panel__course-content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Veniam, molestias.
-                      </p>
-                    </div>
-                    <!-- ! course box footer -->
-                    <ul class="course-panel__course-detail">
-                      <li class="course-panel__item">
-                        <i class="fa-solid fa-sack-dollar"></i>
-                        <span class="">234.000</span>
-                      </li>
-                      <li class="course-panel__item">
-                        <i class="fa-regular fa-folder-open"></i>
-                        <span class="">BackEnd</span>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
+
               </ul>
 
               <div class="course-panel__add-new-course-container">
-                <button class="course-panel__add-new-course-btn btn--primary">
+                <button id="add-new-course-btn" class="course-panel__add-new-course-btn btn--primary">
                   Add New Course
                 </button>
               </div>
@@ -175,6 +118,80 @@
         </div>
       </div>
     </div>
-<script type="module" src="/frontend/src/js/SPA.js"></script>
+
+        <!-- ! modal -->
+    <!-- ? add visible class to show modal -->
+    <div class="modal-container  ">
+      <div class="backdrop"></div>
+      <!-- ! modal content -->
+      <div class="modal__content">
+        <ul class="addNewCourse-form__items">
+          <li class="addNewCourse-form__item">
+            <div class="addNewCourse-form__input">
+              <i class="addNewCourse-form__input-icon fa-solid fa-envelope"></i>
+              <input type="text" placeholder="Title..." id="title-input" />
+            </div>
+            <!-- !add visible class to show error message -->
+            <h4 class="addNewCourse-form-error-message">error message your password is invalid</h4>
+          </li>
+          <li class="addNewCourse-form__item">
+            <div class="addNewCourse-form__input">
+              <i class="addNewCourse-form__input-icon fa-solid fa-envelope"></i>
+              <input type="text" placeholder="Body..." id="body-input" />
+            </div>
+            <!-- !add visible class to show error message -->
+            <h4 class="addNewCourse-form-error-message">error message your password is invalid</h4>
+          </li>
+          <li class="addNewCourse-form__item">
+            <div class="addNewCourse-form__input">
+              <i class="addNewCourse-form__input-icon fa-solid fa-envelope"></i>
+              <input type="text" placeholder="Time..." id="time-input" />
+            </div>
+            <!-- !add visible class to show error message -->
+            <h4 class="addNewCourse-form-error-message">error message your password is invalid</h4>
+          </li>
+          <li class="addNewCourse-form__item">
+            <div class="addNewCourse-form__input">
+              <i class="addNewCourse-form__input-icon fa-solid fa-envelope"></i>
+              <input type="text" placeholder="Price..." id="price-input" />
+            </div>
+            <!-- !add visible class to show error message -->
+            <h4 class="addNewCourse-form-error-message">error message your password is invalid</h4>
+          </li>
+          <li class="addNewCourse-form__item">
+            <div class="addNewCourse-form__input">
+              <i class="addNewCourse-form__input-icon fa-solid fa-envelope"></i>
+              <input type="number" placeholder="Students..." id="student-input" />
+            </div>
+            <!-- !add visible class to show error message -->
+            <h4 class="addNewCourse-form-error-message">error message your password is invalid</h4>
+          </li>
+          <li class="addNewCourse-form__item">
+            <div class="addNewCourse-form__input">
+              <i class="addNewCourse-form__input-icon fa-solid fa-envelope"></i>
+              <input type="text" placeholder="Category..." id="category-input"/>
+            </div>
+            <!-- !add visible class to show error message -->
+            <h4 class="addNewCourse-form-error-message">error message your password is invalid</h4>
+          </li>
+          <li  class="change-image__item signup">
+            <label id="cover-input" for="image">
+              <input  type="file" id="image" />
+              <span class="change-image__text">Select Course Cover</span>
+            </label>
+          </li>
+
+          <ul
+        <div class="modal__btns">
+          <button  id="add-course-btn"  class="btn--primary yes">Add</button>
+          <button  id="cancel-add-course-btn" class="btn--primary no">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+<!-- <script type="module" src="/frontend/src/js/SPA.js"></script> -->
+<script  src="/frontend/src/vendor/axios.min.js"></script>
+<script  src="/frontend/src/js/coursePanel.js"></script>
+
   </body>
 </html>
