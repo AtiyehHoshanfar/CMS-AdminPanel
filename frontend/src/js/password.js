@@ -1,5 +1,6 @@
 const showPasswordBtn = document.querySelector(".show-password");
-showPasswordBtn.addEventListener("click", () => {
+showPasswordBtn.addEventListener("click", (e) => {
+  e.preventDefault()
     const input = showPasswordBtn.parentElement.querySelector("input");
     if (input.type === "password") {
       input.type = "text";

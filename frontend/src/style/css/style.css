@@ -943,6 +943,12 @@ a img.icon {
 .edit-information__image {
   position: relative;
 }
+.edit__submit-btn.btn--primary{
+  width: 100%;
+  font-size: 1.6rem;
+background-color: var(--color-primary-600);
+  padding: 1.2rem;
+}
 .edit-information__change-password,
 .edit-information__change-name,
 .edit-information__change-image {

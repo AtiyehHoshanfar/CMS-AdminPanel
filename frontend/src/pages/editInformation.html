@@ -110,7 +110,7 @@
                   <li class="change-username__item">
                     <div class="change-username__input">
                       <i class="change-username__input-icon fa-solid fa-user"></i>
-                      <input type="text" placeholder="Name..." class="change-username" />
+                      <input id="name" type="text" placeholder="Name..." class="change-username" />
                     </div>
                     <!-- !add visible class to show error message -->
                     <h4 class="change-username-error-message">
@@ -120,7 +120,7 @@
                   <li class="change-username__item">
                     <div class="change-username__input">
                       <i class="change-username__input-icon fa-solid fa-user"></i>
-                      <input type="text" placeholder="LastName..." class="change-lastname"/>
+                      <input id="last-name" type="text" placeholder="LastName..." class="change-lastname"/>
                     </div>
                     <!-- !add visible class to show error message -->
                     <h4 class="change-username-error-message">
@@ -130,7 +130,7 @@
                   <li class="change-username__item">
                     <div class="change-username__input">
                       <i class="change-username__input-icon fa-solid fa-user"></i>
-                      <input type="text" placeholder="UserName..." class="change-username" />
+                      <input id="user-name" type="text" placeholder="UserName..." class="change-username" />
                     </div>
                     <!-- !add visible class to show error message -->
                     <h4 class="change-username-error-message">
@@ -140,7 +140,7 @@
                   <li class="change-username__item">
                     <div class="change-username__input">
                       <i class="change-username__input-icon fa-solid fa-envelope"></i>
-                      <input type="text" placeholder="Email..." class="change-username" />
+                      <input id="email" type="email" placeholder="Email..." class="change-username" />
                     </div>
                     <!-- !add visible class to show error message -->
                     <h4 class="change-username-error-message">
@@ -157,7 +157,7 @@
                   <li class="change-username__item">
                     <div  data-password="new-password" class="password change-username__input">
                       <i class="change-username__input-icon fa-solid fa-key"></i>
-                      <input type="password" placeholder="New Password ..." class="change-lastname"/>
+                      <input id="password" type="password" placeholder="New Password ..." class="change-lastname"/>
                       <button class="show-password"> <i class="change-username__input-icon fa-solid fa-eye"></i></button>
                     </div>
                     <!-- !add visible class to show error message -->
@@ -168,13 +168,18 @@
 
                 </ul>
               </div>
+<button type="submit" class="edit__submit-btn btn--primary" > Edit Information</button>
             </div>
           </div>
 </div>
       </div>
     </div>
+<script src="/frontend/src/vendor/axios.min.js"></script>
+
     <script src="/frontend/src/js/theme.js"></script>
     <script src="/frontend/src/js/password.js"></script>
+    <script src="/frontend/src/js/index.js"></script>
+    <script src="/frontend/src/js/editInformation.js"></script>
 
 <!-- <script type="module" src="/frontend/src/js/SPA.js"></script> -->
 

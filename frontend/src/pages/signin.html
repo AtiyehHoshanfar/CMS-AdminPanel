@@ -26,7 +26,7 @@
             <li class="login-form__item">
               <div class="login-form__input">
                 <i class="login-form__input-icon fa-solid fa-envelope"></i>
-                <input type="email" placeholder="email..." />
+                <input type="email" id="email" placeholder="email..." />
               </div>
               <!-- !add visible class to show error message -->
               <h4 class="login-form-error-message">error message your password is invalid</h4>
@@ -34,11 +34,9 @@
             <!-- ! Password -->
             <li class="login-form__item">
               <div class="login-form__input">
-                <span class="login-form__input-password">
                   <i class="login-form__input-icon fa-solid fa-key"></i>
-                  <input type="password" placeholder="password..."/>
-                </span>
-                <button>
+                  <input type="password" id="password" placeholder="password..."/>
+                <button class="show-password">
                   <i class="login-form__input-icon fa-solid fa-eye"></i>
                 </button>
               </div>
@@ -63,8 +61,10 @@
 
       </div>
     </div>
-    <script src="/src/js/theme.js"></script>
+    <!-- <script src="/frontend/src/js/theme.js"></script> -->
+    <script src="/frontend/src/vendor/axios.min.js"></script>
 
-    <script src="/src/js/index.js"></script>
+    <script src="/frontend/src/js/password.js"></script>
+    <script src="/frontend/src/js/signin.js"></script>
   </body>
 </html>
