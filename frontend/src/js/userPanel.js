@@ -25,7 +25,7 @@ async function getAllUser(){
       <button onclick="editUserInformation('${user._id}')" class="user-panel__edit-btn btn--primary">
         Edit
       </button>
-      <button onclick="showRemoveModal('${user._id}')" class="user-panel__remove-btn btn--secondary">
+      <button onclick="showRemoveModal('${user._id}')" class="user-panel__remove-btn btn--primary">
         Remove
       </button>
     </div>

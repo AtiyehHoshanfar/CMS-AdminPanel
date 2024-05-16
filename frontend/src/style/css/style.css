@@ -24,6 +24,16 @@
   --color-secondary-800: #854d0e;
   --color-secondary-900: #713f12;
   --color-secondary-950: #422006;
+  --color-dark-50: #383838;
+  --color-dark-100: #363636;
+  --color-dark-200: #333333;
+  --color-dark-300: #2e2e2e;
+  --color-dark-400: #2c2c2c;
+  --color-dark-500: #272727;
+  --color-dark-600: #252525;
+  --color-dark-700: #232323;
+  --color-dark-800: #1e1e1e;
+  --color-dark-900: #121212;
   --main-white: #fff;
   --text-color: #0f172a;
   --main-gray: #e2e8f0;
@@ -31,7 +41,11 @@
   --color-error: #ef4444;
 }
 
-/* ! Reset Styles */
+
+  /* ! Reset Styles */
+  body{
+    color-scheme:  light;
+  }
 html {
   font-size: 62.5%;
   background-color: var(--color-primary-100);
@@ -86,7 +100,6 @@ input {
   top: -32px;
   right: 0;
   border-radius: 50%;
-
   box-shadow: 16px -16px 0px var(--color-primary-500);
 }
 .login__content {
@@ -102,8 +115,7 @@ input {
 .login-form__item,
 .change-password__item,
 .change-username__item,
-.addNewCourse-form__item
- {
+.addNewCourse-form__item {
   margin-bottom: 1.6rem;
 }
 .session-form__input,
@@ -160,9 +172,7 @@ input {
   text-align: right;
 }
 .login-form__submit-btn {
-
   text-align: center;
-  
 }
 .login-form__submit-btn .nav__link {
   display: block;
@@ -170,7 +180,7 @@ input {
   font-weight: bold;
   font-size: 1.6rem;
   cursor: pointer;
-  margin:  0 auto;
+  margin: 0 auto;
   background-color: var(--color-secondary-500);
   color: var(--main-white);
   border-radius: 100px;
@@ -701,6 +711,7 @@ a img.icon {
   width: 100%;
   flex: 1 0 0;
   margin: 0.2rem;
+  background-color: var(--color-primary-500);
 }
 .user-panel__remove-btn {
   padding: 0.6rem;
@@ -1015,7 +1026,6 @@ input[type="file"] {
 .modal-container.visible {
   display: flex;
   align-items: center;
-
 }
 .backdrop {
   position: absolute;
@@ -1147,15 +1157,142 @@ input[type="file"] {
     transform: translate(calc(var(--translate) * 1%), 0)
       translate(calc(var(--translate-2)), 0) rotate(0deg);
   }
+}
 
-  to {
-    transform: translate(calc(var(--translate) * 1%), 0)
-      translate(calc(var(--translate-2)), 0) rotate(360deg);
+
+
+/* ! ----------------------------------------- DARK MODE -----------------------------------------  */
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: var(--color-dark-900);
+  }
+  input {
+    color: var(--color-dark-900);
+  }
+
+  ::placeholder {
+    color: var(--color-primary-50);
+  }
+
+  .login-form__input,
+  .change-username__input {
+    background-color: var(--color-dark-50);
+  }
+  .session-form__input-icon,
+  .addNewCourse-form__input-icon,
+  .login-form__input-icon,
+  .change-password__input-icon,
+  .change-username__input-icon {
+    font-size: 1.6rem;
+    color: var(--color-primary-300);
+  }
+  .login-form__with-google {
+    border: 2px solid var(--main-white);
+    color: var(--main-white);
+  }
+  .login-form__divider {
+    color: var(--main-white);
+  }
+  .login__content::after {
+    box-shadow: 16px -16px 0px var(--color-dark-900);
+  }
+  .login-form__forgot-password {
+    color: var(--main-white);
+  }
+  .first-page__welcome-message {
+    color: var(--color-dark-900);
+  }
+  .container__header {
+    background-color: var(--color-dark-50);
+  }
+  .admin-information__content {
+    background-color: var(--color-dark-50);
+  }
+  .admin-information__user-information li {
+    color: var(--main-white);
+  }
+  .admin-information__user-information li :first-child {
+    color: var(--color-primary-400);
+  }
+  .admin-information__user-name {
+    color: var(--main-white);
+  }
+  .admin-information__user-email {
+    color: var(--color-primary-300);
+  }
+  .container__main-content {
+    background-color: var(--color-dark-50);
+  }
+  .session-form__input,
+  .change-password__input,
+  .addNewCourse-form__input,
+  .change-password__input {
+    background-color: var(--color-dark-900);
+  }
+  .main-content__nav-items {
+    border-bottom: 2px solid var(--main-white);
+  }
+  .main-content__nav-item a {
+    color: var(--color-primary-300);
+  }
+  .user-panel__user-information {
+    background-color: var(--color-dark-700);
+  }
+  .user-panel__first-name {
+color: var(--main-white);
+  }
+  .user-panel__last-name {
+color: var(--color-primary-300);
+  }
+  .course-panel__course {
+
+    background-color: var(--color-dark-700);
+
+  }
+  .course-panel__course-content {
+color: var(--main-white);
+  }
+  .course-panel__course-detail {
+color: var(--color-primary-300);
+  }
+  .session-box {
+    border: 2px solid var(--color-dark-900);
+  }
+  .session-name {
+
+    color: var(--main-white);
+  }
+  .session-time {
+
+    color: var(--color-primary-300);
+  }
+  .edit-information__password-title,
+.edit-information__name-title,
+.edit-information__image-title {
+color: var(--main-white);
+}
+.edit-information__password::before,
+.edit-information__name::before,
+.edit-information__image::before {
+
+  background-color: var(--color-primary-100);
+}
+.modal__content {
+  background-color: var(--color-dark-900);
+}
+.modal__text {
+
+  color: var(--main-white);
+}
+@media screen and (min-width: 768px) {
+  .header__user-name {
+
+    color: var(--main-white);
+  }
+  .header__user-email {
+
+    color: var(--color-primary-300);
   }
 }
-
-/* !  */
-a,
-span {
-  pointer-events: none;
 }
+
