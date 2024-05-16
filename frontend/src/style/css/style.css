@@ -41,11 +41,10 @@
   --color-error: #ef4444;
 }
 
-
-  /* ! Reset Styles */
-  body{
-    color-scheme:  light;
-  }
+/* ! Reset Styles */
+body {
+  color-scheme: light;
+}
 html {
   font-size: 62.5%;
   background-color: var(--color-primary-100);
@@ -120,7 +119,7 @@ input {
 }
 .session-form__input,
 .login-form__input,
-.change-password__input,
+.password__input,
 .addNewCourse-form__input,
 .change-username__input {
   display: flex;
@@ -1000,7 +999,8 @@ input[type="file"] {
   .edit-information__change-password,
   .edit-information__change-name,
   .edit-information__change-image {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     margin-bottom: 2.4rem;
   }
   .change-password__item,
@@ -1159,140 +1159,131 @@ input[type="file"] {
   }
 }
 
-
-
 /* ! ----------------------------------------- DARK MODE -----------------------------------------  */
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: var(--color-dark-900);
-  }
-  input {
-    color: var(--color-dark-900);
-  }
 
-  ::placeholder {
-    color: var(--color-primary-50);
-  }
-
-  .login-form__input,
-  .change-username__input {
-    background-color: var(--color-dark-50);
-  }
-  .session-form__input-icon,
-  .addNewCourse-form__input-icon,
-  .login-form__input-icon,
-  .change-password__input-icon,
-  .change-username__input-icon {
-    font-size: 1.6rem;
-    color: var(--color-primary-300);
-  }
-  .login-form__with-google {
-    border: 2px solid var(--main-white);
-    color: var(--main-white);
-  }
-  .login-form__divider {
-    color: var(--main-white);
-  }
-  .login__content::after {
-    box-shadow: 16px -16px 0px var(--color-dark-900);
-  }
-  .login-form__forgot-password {
-    color: var(--main-white);
-  }
-  .first-page__welcome-message {
-    color: var(--color-dark-900);
-  }
-  .container__header {
-    background-color: var(--color-dark-50);
-  }
-  .admin-information__content {
-    background-color: var(--color-dark-50);
-  }
-  .admin-information__user-information li {
-    color: var(--main-white);
-  }
-  .admin-information__user-information li :first-child {
-    color: var(--color-primary-400);
-  }
-  .admin-information__user-name {
-    color: var(--main-white);
-  }
-  .admin-information__user-email {
-    color: var(--color-primary-300);
-  }
-  .container__main-content {
-    background-color: var(--color-dark-50);
-  }
-  .session-form__input,
-  .change-password__input,
-  .addNewCourse-form__input,
-  .change-password__input {
-    background-color: var(--color-dark-900);
-  }
-  .main-content__nav-items {
-    border-bottom: 2px solid var(--main-white);
-  }
-  .main-content__nav-item a {
-    color: var(--color-primary-300);
-  }
-  .user-panel__user-information {
-    background-color: var(--color-dark-700);
-  }
-  .user-panel__first-name {
-color: var(--main-white);
-  }
-  .user-panel__last-name {
-color: var(--color-primary-300);
-  }
-  .course-panel__course {
-
-    background-color: var(--color-dark-700);
-
-  }
-  .course-panel__course-content {
-color: var(--main-white);
-  }
-  .course-panel__course-detail {
-color: var(--color-primary-300);
-  }
-  .session-box {
-    border: 2px solid var(--color-dark-900);
-  }
-  .session-name {
-
-    color: var(--main-white);
-  }
-  .session-time {
-
-    color: var(--color-primary-300);
-  }
-  .edit-information__password-title,
-.edit-information__name-title,
-.edit-information__image-title {
-color: var(--main-white);
-}
-.edit-information__password::before,
-.edit-information__name::before,
-.edit-information__image::before {
-
-  background-color: var(--color-primary-100);
-}
-.modal__content {
+html.dark {
   background-color: var(--color-dark-900);
 }
-.modal__text {
+html.darkinput {
+  color: var(--color-dark-900);
+}
 
+html.dark::placeholder {
+  color: var(--color-primary-50);
+}
+
+html.dark .login-form__input,
+html.dark .change-username__input {
+  background-color: var(--color-dark-50);
+}
+html.dark .session-form__input-icon,
+html.dark .addNewCourse-form__input-icon,
+html.dark .login-form__input-icon,
+html.dark .change-password__input-icon,
+html.dark .change-username__input-icon {
+  font-size: 1.6rem;
+  color: var(--color-primary-50);
+}
+html.dark .login-form__with-google {
+  border: 2px solid var(--main-white);
+  color: var(--main-white);
+}
+html.dark .login-form__divider {
+  color: var(--main-white);
+}
+html.dark .login__content::after {
+  box-shadow: 16px -16px 0px var(--color-dark-900);
+}
+html.dark .login-form__forgot-password {
+  color: var(--main-white);
+}
+html.dark .first-page__welcome-message {
+  color: var(--color-dark-900);
+}
+html.dark .container__header {
+  background-color: var(--color-dark-50);
+}
+html.dark .admin-information__content {
+  background-color: var(--color-dark-50);
+}
+html.dark .admin-information__user-information li {
+  color: var(--main-white);
+}
+html.dark .admin-information__user-information li :first-child {
+  color: var(--color-primary-400);
+}
+html.dark .admin-information__user-name {
+  color: var(--main-white);
+}
+html.dark .admin-information__user-email {
+  color: var(--color-primary-300);
+}
+html.dark .container__main-content {
+  background-color: var(--color-dark-50);
+}
+html.dark .session-form__input,
+html.dark .change-username__input,
+html.dark .change-password__input,
+html.dark .addNewCourse-form__input,
+html.dark .change-password__input {
+  color: var(--color-primary-50);
+  background-color: var(--color-dark-700);
+}
+html.dark .main-content__nav-items {
+  border-bottom: 2px solid var(--main-white);
+}
+html.dark .main-content__nav-item a {
+  color: var(--color-primary-300);
+}
+html.dark .user-panel__user-information {
+  background-color: var(--color-dark-700);
+}
+html.dark .user-panel__first-name {
+  color: var(--main-white);
+}
+html.dark .user-panel__last-name {
+  color: var(--color-primary-300);
+}
+html.dark .course-panel__course {
+  background-color: var(--color-dark-700);
+}
+html.dark .course-panel__course-content {
+  color: var(--main-white);
+}
+html.dark .course-panel__course-detail {
+  color: var(--color-primary-300);
+}
+html.dark .session-box {
+  border: 2px solid var(--color-dark-900);
+}
+html.dark .session-name {
+  color: var(--main-white);
+}
+html.dark .session-time {
+  color: var(--color-primary-300);
+}
+html.dark .edit-information__password-title,
+html.dark .edit-information__name-title,
+html.dark .edit-information__image-title {
+  color: var(--main-white);
+}
+html.dark .edit-information__password::before,
+html.dark .edit-information__name::before,
+html.dark .edit-information__image::before {
+  background-color: var(--color-primary-100);
+}
+html.dark .modal__content {
+  background-color: var(--color-dark-900);
+}
+html.dark .modal__text {
   color: var(--main-white);
 }
 @media screen and (min-width: 768px) {
-  .header__user-name {
-
+  html.dark .header__user-name {
     color: var(--main-white);
   }
-  .header__user-email {
-
+  html.dark .header__user-email {
     color: var(--color-primary-300);
   }
 }
-}
-
+/*  */

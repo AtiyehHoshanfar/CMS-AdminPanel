@@ -110,7 +110,7 @@
                   <li class="change-username__item">
                     <div class="change-username__input">
                       <i class="change-username__input-icon fa-solid fa-user"></i>
-                      <input type="text" placeholder="Name..." />
+                      <input type="text" placeholder="Name..." class="change-username" />
                     </div>
                     <!-- !add visible class to show error message -->
                     <h4 class="change-username-error-message">
@@ -120,7 +120,27 @@
                   <li class="change-username__item">
                     <div class="change-username__input">
                       <i class="change-username__input-icon fa-solid fa-user"></i>
-                      <input type="text" placeholder="LastName..." />
+                      <input type="text" placeholder="LastName..." class="change-lastname"/>
+                    </div>
+                    <!-- !add visible class to show error message -->
+                    <h4 class="change-username-error-message">
+                      error message your password is invalid
+                    </h4>
+                  </li>
+                  <li class="change-username__item">
+                    <div class="change-username__input">
+                      <i class="change-username__input-icon fa-solid fa-user"></i>
+                      <input type="text" placeholder="UserName..." class="change-username" />
+                    </div>
+                    <!-- !add visible class to show error message -->
+                    <h4 class="change-username-error-message">
+                      error message your password is invalid
+                    </h4>
+                  </li>
+                  <li class="change-username__item">
+                    <div class="change-username__input">
+                      <i class="change-username__input-icon fa-solid fa-envelope"></i>
+                      <input type="text" placeholder="Email..." class="change-username" />
                     </div>
                     <!-- !add visible class to show error message -->
                     <h4 class="change-username-error-message">
@@ -133,93 +153,19 @@
               <div class="edit-information__password">
                 <h3 class="edit-information__password-title">Password</h3>
                 <ul class="edit-information__change-password">
-                  <!-- ! Old Password -->
-                  <li class="change-password__item">
-                    <div class="change-password__input">
-                      <span class="change-password__input-password">
-                        <i
-                          class="change-password__input-icon fa-solid fa-key"
-                        ></i>
-                        <input type="password" placeholder="Old password..." />
-                      </span>
-                      <button>
-                        <i
-                          class="change-password__input-icon fa-solid fa-eye"
-                        ></i>
-                      </button>
+
+                  <li class="change-username__item">
+                    <div  data-password="new-password" class="password change-username__input">
+                      <i class="change-username__input-icon fa-solid fa-key"></i>
+                      <input type="password" placeholder="New Password ..." class="change-lastname"/>
+                      <button class="show-password"> <i class="change-username__input-icon fa-solid fa-eye"></i></button>
                     </div>
-                    <div class="login-form__input-detail">
-                      <!-- !add visible class to show error message -->
-                      <h4 class="change-password-error-message">
-                        error message your password is invalid
-                      </h4>
-                    </div>
+                    <!-- !add visible class to show error message -->
+                    <h4 class="change-username-error-message">
+                      error message your password is invalid
+                    </h4>
                   </li>
-                  <!-- ! New Password -->
-                  <li class="change-password__item">
-                    <div class="change-password__input">
-                      <span class="change-password__input-password">
-                        <i
-                          class="change-password__input-icon fa-solid fa-key"
-                        ></i>
-                        <input type="password" placeholder="New password..." />
-                      </span>
-                      <button>
-                        <i
-                          class="change-password__input-icon fa-solid fa-eye"
-                        ></i>
-                      </button>
-                    </div>
-                    <div class="login-form__input-detail">
-                      <!-- !add visible class to show error message -->
-                      <h4 class="change-password-error-message">
-                        error message your password is invalid
-                      </h4>
-                    </div>
-                  </li>
-                  <!-- ! Confirm Password -->
-                  <li class="change-password__item">
-                    <div class="change-password__input">
-                      <span class="change-password__input-password">
-                        <i
-                          class="change-password__input-icon fa-solid fa-key"
-                        ></i>
-                        <input
-                          type="password"
-                          placeholder="Confirm password..."
-                        />
-                      </span>
-                      <button>
-                        <i
-                          class="change-password__input-icon fa-solid fa-eye"
-                        ></i>
-                      </button>
-                    </div>
-                    <div class="login-form__input-detail">
-                      <!-- !add visible class to show error message -->
-                      <h4 class="change-password-error-message">
-                        error message your password is invalid
-                      </h4>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <!-- ! Image -->
-              <div class="edit-information__image">
-                <h3 class="edit-information__image-title">Image</h3>
-                <ul class="edit-information__change-image">
-                  <li  class="change-image__item">
-                    <label for="change-image">
-                      <input type="file" id="change-image" />
-                      <span class="change-image__text">Select Your Image</span>
-                    </label>
-                  </li>
-                  <li  class="change-banner__item">
-                    <label for="change-banner">
-                      <input type="file" id="change-banner" />
-                      <span class="change-image__text">Select Your Banner</span>
-                    </label>
-                  </li>
+
                 </ul>
               </div>
             </div>
@@ -228,8 +174,9 @@
       </div>
     </div>
     <script src="/frontend/src/js/theme.js"></script>
-    <script src="/frontend/src/js/theme.js"></script>
-<script type="module" src="/frontend/src/js/SPA.js"></script>
+    <script src="/frontend/src/js/password.js"></script>
+
+<!-- <script type="module" src="/frontend/src/js/SPA.js"></script> -->
 
   </body>
 </html>
