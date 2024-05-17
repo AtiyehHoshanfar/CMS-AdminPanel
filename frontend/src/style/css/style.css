@@ -718,7 +718,11 @@ a img.icon {
   flex: 1 0 0;
   margin: 0.2rem;
 }
-
+.edit-user-information__btn{
+  width: 100%;
+font-size: 1.6rem;
+  padding: 1.2rem;
+}
 /* ! ------------------------------ user panel media query -------------------------------------- */
 @media screen and (min-width: 1024px) {
   .user-panel__btns {

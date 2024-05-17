@@ -114,9 +114,9 @@
 
 
 
-    <!-- ! modal -->
+    <!-- ! modal remove  -->
     <!-- ? add visible class to show modal -->
-    <div class="modal-container ">
+    <div class="modal-container remove">
       <div class="backdrop"></div>
       <div class="modal__content">
         <span class="modal__text">Are you sure ?</span>
@@ -124,6 +124,53 @@
           <button  id="remove-user-btn"  class="btn--primary yes">Yes</button>
           <button  id="cancel-delete-user-btn" class="btn--primary no">No</button>
         </div>
+      </div>
+    </div>
+
+        <!-- ! modal edit  -->
+    <!-- ? add visible class to show modal -->
+    <div class="modal-container edit">
+      <div class="backdrop edit"></div>
+      <div class="modal__content">
+        <ul class="edit-information__change-name">
+          <li class="change-username__item">
+            <div class="change-username__input">
+              <i class="change-username__input-icon fa-solid fa-user"></i>
+              <input id="name" type="text" placeholder="Name..." class="change-username" />
+            </div>
+            <!-- !add visible class to show error message -->
+            <h4 class="change-username-error-message">
+              error message your password is invalid
+            </h4>
+          </li>
+          <li class="change-username__item ">
+            <div class="change-username__input">
+              <i class="change-username__input-icon fa-solid fa-user"></i>
+              <input id="lastname" type="text" placeholder="LastName..." class="change-username" />
+            </div>
+            <!-- !add visible class to show error message -->
+            <h4 class="change-username-error-message">
+              error message your password is invalid
+            </h4>
+          </li>
+          <li class="change-username__item">
+            <div class="change-username__input">
+              <i class="change-username__input-icon fa-solid fa-user"></i>
+              <input id="username" type="text" placeholder="UserName..." class="change-username" />
+            </div>
+            <!-- !add visible class to show error message -->
+            <h4 class="change-username-error-message">
+              error message your password is invalid
+            </h4>
+          </li>
+          <li  class="change-image__item signup">
+            <label id="image-input" for="change-image">
+              <input  type="file" id="change-image" />
+              <span class="change-image__text">Select Your Image</span>
+            </label>
+          </li>
+          </ul>
+          <button class="edit-user-information__btn btn--primary">Edit Information</button>
       </div>
     </div>
     <!-- ! loader -->
